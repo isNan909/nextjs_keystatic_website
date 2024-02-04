@@ -1,25 +1,18 @@
-import { config, collection, fields } from '@keystatic/core';
+import { config } from "@keystatic/core";
+
+import banner from "./app/schemas/singleton/banner";
+import posts from "./app/schemas/collections/posts";
+import authors from "./app/schemas/collections/authors";
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: "local",
+  },
+  singletons: {
+    banner,
   },
   collections: {
-    posts: collection({
-      label: 'Posts',
-      slugField: 'title',
-      path: 'posts/*',
-      format: { contentField: 'content' },
-      schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        content: fields.document({
-          label: 'Content',
-          formatting: true,
-          dividers: true,
-          links: true,
-          images: true,
-        }),
-      },
-    }),
+    posts,
+    authors,
   },
 });
