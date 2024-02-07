@@ -1,4 +1,5 @@
 import { collection, fields } from "@keystatic/core";
+import { ComponentBlocks } from "../../components/ComponentBlocks";
 
 export default collection({
   label: "Posts",
@@ -40,6 +41,7 @@ export default collection({
       links: true,
       images: true,
       label: "Content",
+      componentBlocks: ComponentBlocks,
     }),
   },
 });
