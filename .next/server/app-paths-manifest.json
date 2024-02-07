@@ -1,6 +1,7 @@
 {
   "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/blog-detail/[slug]/page": "app/blog-detail/[slug]/page.js"
+  "/api/keystatic/[...params]/route": "app/api/keystatic/[...params]/route.js",
+  "/blog-detail/[slug]/page": "app/blog-detail/[slug]/page.js",
+  "/keystatic/[[...params]]/page": "app/keystatic/[[...params]]/page.js"
 }
