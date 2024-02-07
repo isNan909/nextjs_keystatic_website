@@ -11,21 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/layout.js"
     ],
-    "/about/page": [
+    "/keystatic/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/keystatic/layout.js"
     ],
-    "/blog-detail/[slug]/page": [
+    "/keystatic/[[...params]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/blog-detail/[slug]/page.js"
-    ],
-    "/blog-detail/[slug]/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/blog-detail/[slug]/layout.css",
-      "static/chunks/app/blog-detail/[slug]/layout.js"
+      "static/chunks/app/keystatic/[[...params]]/page.js"
     ]
   }
 }

@@ -1,4 +1,4 @@
-// File: /Users/mac/Desktop/nextjs_keystatic_website/app/page.tsx
+// File: /Users/mac/Documents/allFiles/projects/ftwc__code/nextjs_keystatic_website/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
