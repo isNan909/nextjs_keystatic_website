@@ -1,4 +1,5 @@
-import Navbar from "../app/components/navbar";
+import Navbar from "./components/Navbar";
+import Herobanner from "./components/Herobanner";
 
 export default function RootLayout({
   children,
@@ -10,6 +11,13 @@ export default function RootLayout({
       <body>
         <div className="container max-w-7xl mx-auto">
           <Navbar />
+          <Herobanner
+            heading="fgn"
+            subheading="sfgn"
+            image="sfgn"
+            buttontxt="sfgn"
+            url="sfgn"
+          />
           {children}
         </div>
       </body>
