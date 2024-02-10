@@ -3,6 +3,7 @@ import { reader } from "./reader";
 import Herobanner from "./components/Herobanner";
 import Image from "./components/Image";
 import CallToAction from "./components/CallToAction";
+import Servicecard from "./components/Servicecard";
 import "./styles.css";
 
 export default async function Homepage() {
@@ -10,8 +11,6 @@ export default async function Homepage() {
   const services = await reader.collections.services.all();
   const banner = await reader.singletons.banner.read();
   const cta = await reader.singletons.cta.read();
-
-  console.log(services, "services");
 
   return (
     <div>
@@ -22,6 +21,20 @@ export default async function Homepage() {
         buttontxt={banner?.buttontxt}
         url={banner?.url}
       />
+      <section>
+        <ul className="list-none">
+          {services.map((service) => (
+            <li className="list-none" key={service.slug}>
+              <Servicecard
+                slug={service.slug}
+                title={service.entry.title}
+                subtitle={service.entry.subtitle}
+                icon={service.entry.icon}
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
       <ul>
         <section>
           <h3>Our blogs</h3>
