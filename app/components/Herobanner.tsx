@@ -1,3 +1,5 @@
+import Button from "./Button";
+import Image from "./Image";
 export default function Herobanner({
   heading,
   subheading,
@@ -5,18 +7,22 @@ export default function Herobanner({
   buttontxt,
   url,
 }: {
-  heading: string;
-  subheading: string;
-  image: string;
-  buttontxt: string;
-  url: string;
+  heading: string | undefined;
+  subheading: string | undefined;
+  image: string | undefined | null;
+  buttontxt: string | undefined;
+  url: string | undefined | null;
 }) {
   return (
     <div>
-      {heading}
-      {subheading}
-      {image}
-      <a href={url}>{buttontxt}</a>
+      <section
+        className={`relative bg-${image} bg-cover bg-center bg-no-repeat`}
+      >
+        <h1>{heading}</h1>
+        <p>{subheading}</p>
+        <Image src={`${image}`} alt="" caption="" />
+        <Button href={url} label={buttontxt} />
+      </section>
     </div>
   );
 }

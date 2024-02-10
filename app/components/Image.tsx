@@ -3,13 +3,13 @@ const Image = ({
   alt,
   caption,
 }: {
-  src: string;
+  src: string | null | undefined;
   alt: string;
   caption?: string;
 }) => {
   return (
     <div className="flex flex-col items-center">
-      <img src={`${src}`} alt={alt} />
+      <img src={`${src}`} alt={alt} className="w-full" />
       {caption && <p className="mt-0 text-center text-sm">{caption}</p>}
     </div>
   );
