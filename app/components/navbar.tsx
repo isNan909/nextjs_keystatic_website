@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export type navbarTypes = {
@@ -22,6 +23,7 @@ export const NavItems = [
 ];
 
 export default async function Navbar() {
+  const pathname = usePathname();
   return (
     <nav className="flex justify-between py-4">
       <div>
@@ -31,7 +33,15 @@ export default async function Navbar() {
       </div>
       <div className="flex gap-4">
         {NavItems.map((item: navbarTypes) => (
-          <Link key={item.slug} className="text-gray-800" href={item.slug}>
+          <Link
+            key={item.slug}
+            className={
+              pathname === item.slug
+                ? "border-text-green-700 border-b-2"
+                : "border-transparent"
+            }
+            href={item.slug}
+          >
             {item.name}
           </Link>
         ))}

@@ -22,6 +22,9 @@ export default async function Homepage() {
         url={banner?.url}
       />
       <section>
+        <h3 className="text-2xl font-extrabold text-center">
+          Services we offer
+        </h3>
         <ul className="list-none">
           {services.map((service) => (
             <li className="list-none" key={service.slug}>
@@ -37,7 +40,7 @@ export default async function Homepage() {
       </section>
       <ul>
         <section>
-          <h3>Our blogs</h3>
+          <h3 className="text-2xl font-extrabold text-center">Our blogs</h3>
           {posts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog-detail/${post.slug}`}>
