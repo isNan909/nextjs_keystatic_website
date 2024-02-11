@@ -20,7 +20,7 @@ export default function Herobanner({
       >
         <h1>{heading}</h1>
         <p>{subheading}</p>
-        <Image src={`${image}`} alt="" caption="" />
+        <Image src={`${image}`} alt="" caption="" className="w-full" />
         <Button href={url} label={buttontxt} />
       </section>
     </div>
