@@ -38,9 +38,9 @@ export default async function Homepage() {
           ))}
         </ul>
       </section>
-      <ul>
-        <section>
-          <h3 className="text-2xl font-extrabold text-center">Our blogs</h3>
+      <section>
+        <h3 className="text-2xl font-extrabold text-center">Our blogs</h3>
+        <ul>
           {posts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog-detail/${post.slug}`}>
@@ -54,8 +54,8 @@ export default async function Homepage() {
               </Link>
             </li>
           ))}
-        </section>
-      </ul>
+        </ul>
+      </section>
       <CallToAction
         title={cta?.heading || ""}
         summary={cta?.subheading || ""}
